@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/cam_home.png</file>
+        <file>resources/folder.png</file>
+        <file>resources/grid.png</file>
+        <file>resources/tf.png</file>
+        <file>resources/tfLoad.png</file>
+        <file>resources/tfSave.png</file>
+        <file>resources/view-dual.png</file>
+        <file>resources/view-quad.png</file>
+        <file>resources/view-single.png</file>
+        <file>resources/volLoad.png</file>
+        <file>resources/save.png</file>
+        <file>resources/rotation.png</file>
+    </qresource>
+</RCC>
