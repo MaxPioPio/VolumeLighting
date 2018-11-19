@@ -1,6 +1,6 @@
 #pragma once
 
-#include <QVector3d>
+#include <QVector3D>
 #include <QQuaternion>
 #include <QMatrix4x4>
 

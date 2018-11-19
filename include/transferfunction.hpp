@@ -2,8 +2,10 @@
 
 #include <QColor>
 #include <QObject>
-#include <Windows.h>
-#include <gl/GL.h>
+#ifdef WIN32
+    #include <Windows.h>
+#endif
+#include <GL/gl.h>
 
 class TransferFunction : public QObject
 {

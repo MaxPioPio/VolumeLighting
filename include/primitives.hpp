@@ -4,9 +4,11 @@
 #include <QMatrix4x4>
 #include <QtMath>
 #include <QQuaternion>
-#include <windows.h>
+#ifdef WIN32
+    #include <windows.h>
+#endif
 #include <QOpenGLContext>
-#include <gl/GL.h>
+#include <GL/gl.h>
 
 enum Prim3D {
     NONE = 0,
