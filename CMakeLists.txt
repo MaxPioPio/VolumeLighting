@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.1.1)
-project(volume-lighting)
-set (CMAKE_CXX_STANDARD 11)
+project(volume-lighting CXX)
 
 # source files
 set(SOURCES
