@@ -2,7 +2,7 @@
 <p align="center"><img src="app.jpg" width="90%" /><br></p>
 
 # VolumeLighting
-This software is a simple renderer for volumetric data - e.g. from CT or MRT scans - with an approximization for global lighting and scattering phenomenons. It is roughly based on techniques for texture based volume rendering as proposed in:
+This software is a simple renderer for volumetric data - e.g. from CT or MRT scans - with an approximization for global lighting and scattering phenomenons. The only dependencies are [CMake 3.1.1](https://cmake.org/) or newer, [Qt5](https://www.qt.io/) and OpenGL 4.0. It is roughly based on techniques for texture based volume rendering as proposed in:
 
 > *Real-time Volume Graphics*, Engel et. al. 2006 \
 > *Acceleration Techniques for GPU-based Volume Rendering*, [Krüger et. al. 2003](http://www.in.tum.de/en/cg/research/publications/2003/acceleration-techniques-for-gpu-based-volume-rendering/ "Krüger et. al. 2003")
@@ -10,7 +10,6 @@ This software is a simple renderer for volumetric data - e.g. from CT or MRT sca
 The methods for rendering global lighting and multiple scattering are taken from
 
 > *Interactive Global Light Propagation in Direct Volume Rendering using Local Piecewise Integration*, [Hernell et. al. 2008](http://scivis.itn.liu.se/publications/2008/HLY08/ "Hernell et. al. 2008")
-
 
 ### Features
 * Direct Volume Rendering and Maximum Intensity Projection
