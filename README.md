@@ -1,3 +1,6 @@
+> <sub>datasets: MRI Head, Computer Graphics Group; CTA Head with Aneurysm, Division of Neuroradiology, University of Erlangen, Germany</sub>
+<p align="center"><img src="app.jpg" width="90%" /><br></p>
+
 # VolumeLighting
 This software is a simple renderer for volumetric data - e.g. from CT or MRT scans - with an approximization for global lighting and scattering phenomenons. It is roughly based on techniques for texture based volume rendering as proposed in:
 
