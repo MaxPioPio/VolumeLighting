@@ -4,6 +4,9 @@
 #include <QFile>
 #include <QFileInfo>
 
+QString VOLUMEDATA_PATHS[] = { "/VolumeData/", "./VolumeData/", "../VolumeData/", "../../VolumeData/", "../../../VolumeData/" };
+
+
 Scene::Scene()
 {
     // volume rendering
@@ -51,19 +54,34 @@ void Scene::openProject(QString path) {
     // volume data
     QString volumePath;
     in >> volumePath;
-    // if the file at the absolute path saved in the project doesn't exist, try to laod it
-    // from the 'default' volume data folder
+    // if the file at the absolute path saved in the project doesn't exist, try to load it
+    // from a 'default' volume data folder '{/..}*/VolumeData/'
     QFileInfo volumeFile = QFileInfo(volumePath);
     if(!volumeFile.exists()) {
         qInfo() << "Unable to load volume data from '" << volumePath << "'!";
         volumePath.remove(0, volumePath.lastIndexOf("/")+1);
-        volumePath = "../VolumeData/" + volumePath;
-        qInfo() << "Trying to load from '" << volumePath << "' instead.";
+
+        // try different paths: {/..}*/VolumeData/, [ProjectPath]/VolumeData/
+        int i;
+        for (i = 0; i < 5 && !QFileInfo(VOLUMEDATA_PATHS[i] + volumePath).exists(); i++)
+            qInfo() << "Trying '" << (VOLUMEDATA_PATHS[i] + volumePath) << "'..";
+        if (i < 5)
+            volumePath = VOLUMEDATA_PATHS[i] + volumePath;
+        else
+            volumePath = path.left(path.lastIndexOf("/")+1) + volumePath;
+        volumeFile = QFileInfo(volumePath);
     }
 
     // load new volume data if needed
-    if(volumePath != volume->getFilePath())
+    if (volumePath != volume->getFilePath())
+    {
+        qInfo() << "Loading volume from '" << volumePath << "'";
         volume->loadFrom(volumePath);
+    }
+    else
+    {
+        qInfo() << "Volume '" << volumePath << "' still up to date";
+    }
     // renderproperties
     renderProps->loadFrom(in);
     file.close();
