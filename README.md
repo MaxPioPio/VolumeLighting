@@ -7,17 +7,17 @@ This software is a simple renderer for volumetric data - e.g. from CT or MRT sca
 > *Real-time Volume Graphics*, Engel et. al. 2006 \
 > *Acceleration Techniques for GPU-based Volume Rendering*, [Krüger et. al. 2003](http://www.in.tum.de/en/cg/research/publications/2003/acceleration-techniques-for-gpu-based-volume-rendering/ "Krüger et. al. 2003")
 
-The methods for rendering global lighting and multi-scattering are taken from
+The methods for rendering global lighting and multiple scattering are taken from
 
-> *Interactive Global Light Propagation in Direct Volume Rendering using Local Piecewise Integration*,[ Hernell et. al. 2008](http://scivis.itn.liu.se/publications/2008/HLY08/ " Hernell et. al. 2008")
+> *Interactive Global Light Propagation in Direct Volume Rendering using Local Piecewise Integration*, [Hernell et. al. 2008](http://scivis.itn.liu.se/publications/2008/HLY08/ "Hernell et. al. 2008")
 
 
 ### Features
 * Direct Volume Rendering and Maximum Intensity Projection
-* simple 1D colour and opacity transferfunction editor 
+* simple 1D colour and opacity transfer function editor 
 * local Phong lighting
 * global lighting (single scattering) through shadow volumes
-* an approximization for uniformly distributed multi scattering
+* an approximation for uniformly distributed multiple scattering
 
 ### Supported Data Format
 Volume data must exist in RAW-format with the following layout:
