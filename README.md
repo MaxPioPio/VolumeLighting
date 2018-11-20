@@ -25,3 +25,5 @@ Volume data must exist in RAW-format with the following layout:
 > 456 300 488 \
 > 0.7 1 0.7 \
 > [byte data]
+
+Public volume datasets can be found, for example, on https://klacansky.com/open-scivis-datasets/
