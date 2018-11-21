@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.1.1)
-project(volume-lighting CXX)
+project(volume-lighting)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
+set(CMAKE_CXX_STANDARD 11)
 
 # source files
 set(SOURCES
@@ -60,9 +60,7 @@ set(SHADERS
 )
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
-# register Qt5 cmake locations in path and config
-#set(QT_CMAKE_PATH "/<Qt_Version>/<Compiler>/lib/cmake" CACHE PATH "Qt Cmake dir - i.e. */[QtVersion]/[Compiler]/lib/cmake")
-#set(CMAKE_PREFIX_PATH ${QT_CMAKE_PATH})
+
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 

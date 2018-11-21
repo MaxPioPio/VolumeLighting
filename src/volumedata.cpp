@@ -24,14 +24,14 @@ void VolumeData::loadFrom(QString path) {
     // check if the file exists
     QFile file(path);
     if(!file.exists()) {
-        qWarning() << "File '" << path << "'' does not exist!";
+        qWarning() << "File " << path << " does not exist!";
         return;
     }
 
     // open the file
     qInfo() << endl << "Loading volume from " << path;
     if(!file.open(QIODevice::ReadOnly)) {
-        qWarning() << "Could not open file '" << path << "'' !";
+        qWarning() << "Could not open file " << path << " !";
         return;
     }
 
