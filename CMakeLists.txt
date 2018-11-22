@@ -54,7 +54,7 @@ set(SHADERS
 		glsl/scattering.frag
 		glsl/shadow.vert
 		glsl/shadow.frag
-		glsl/tex3D.vert
+		glsl/tex3d.vert
 		glsl/volume.vert
 		glsl/volume.frag
 )
